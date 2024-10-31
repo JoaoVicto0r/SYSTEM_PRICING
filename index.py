@@ -1,14 +1,3 @@
-import pandas as pd
-
-# Defina o caminho para o arquivo Excel
-file_path = 'caminho/para/o/arquivo.xlsx'  # Altere para o caminho correto
-
-# Carregue o arquivo Excel
-excel_data = pd.ExcelFile(file_path)
-
-# Agora você pode chamar a função `carregar_receitas`
-receitas = carregar_receitas(excel_data)
-
 class Receita:
     def __init__(self, nome, ingredientes):
         """
@@ -85,6 +74,18 @@ def carregar_receitas(excel_data):
 
 # Carregar todas as receitas e exibir detalhes
 receitas = carregar_receitas(excel_data)
+
+import pandas as pd
+
+# Defina o caminho para o arquivo Excel
+file_path = 'caminho/para/o/arquivo.xlsx'  # Altere para o caminho correto
+
+# Carregue o arquivo Excel
+excel_data = pd.ExcelFile(file_path)
+
+# Agora você pode chamar a função `carregar_receitas`
+receitas = carregar_receitas(excel_data)
+
 
 # Exibir detalhes das receitas carregadas
 for receita in receitas[:3]:  # Exibir apenas as 3 primeiras para não sobrecarregar a saída
