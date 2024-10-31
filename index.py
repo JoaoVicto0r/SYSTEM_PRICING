@@ -1,3 +1,4 @@
+import pandas as pd
 class Receita:
     def __init__(self, nome, ingredientes):
         """
@@ -75,7 +76,7 @@ def carregar_receitas(excel_data):
 # Carregar todas as receitas e exibir detalhes
 receitas = carregar_receitas(excel_data)
 
-import pandas as pd
+
 
 # Defina o caminho para o arquivo Excel
 file_path = 'c:/Users/João Paulo/SYSTEM_PRICING/arquivo.xlsx'  
