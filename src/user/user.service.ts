@@ -18,5 +18,18 @@ export class UserService {
   
   async findAll() {
     return this.prisma.user.findMany();
+
+
   }
+
+  async findByName( produto: string) {
+
+    const result = await this.prisma.user.findUnique({
+
+      where: {produto,}
+    });
+  }
+
+
+
 }
