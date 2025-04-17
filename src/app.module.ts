@@ -7,6 +7,7 @@ import { User } from './user/user.entity';
 import { UserService } from './user/user.service';
 import { UserController } from './user/user.controller';
 import { UserModule } from './user/user.module';
+import { PrismaService } from './prisma/prisma.service';
 
 
 dotenv.config();
@@ -27,6 +28,7 @@ const isOffline = process.env.DB_TYPE === 'sqlite';
     }),
     UserModule
   ],
+  providers: [PrismaService],
 
 
 
